@@ -1,0 +1,11 @@
+
+<input type="text" placeholder="city" [(ngModel)]="city"/>
+<input type="button" value="לקבלת תחזית מזג האויר" (click)="getWeather()"/>
+<div *ngIf="show"  >
+<div  *ngFor="let x of days">
+    <p>------------------------</p>
+    <p>date:{{x.date}}</p>
+    <p>avgvis_km {{x.avgvis_km}}</p>
+    <p>avgtemp_c:{{x.avgtemp_c}}</p>
+</div>
+</div>
